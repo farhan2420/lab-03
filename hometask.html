@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  let y = document.forms["myForm"]["fnumb"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+      }
+      else if(y==""){
+      
+          alert("Number must be filled out");
+      }
+}
+</script>
+
+<style>
+    body {background-color: rgb(79, 111, 238);}
+    h1   {color: rgb(20, 21, 39);}
+   
+    </style>
+
+</head>
+<body>
+
+<h1 color="blue">Student Registration Page</h1>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <br>
+  Roll Number: <input type="number" name="fnumb">
+  <br>
+  <input type="submit" value="Submit">
+  
+</form>
+
+</body>
+</html>
